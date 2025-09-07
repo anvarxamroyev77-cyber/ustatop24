@@ -1,0 +1,26 @@
+/* Simple unified styles for auth + dashboard (light and dark areas) */
+:root{
+  --bg:#071423; --panel:#081626; --muted:#98a0b3; --accent1:#6ee7b7; --accent2:#60a5fa;
+  --glass: rgba(255,255,255,0.03); --radius:12px; --text:#e6eef8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#071028,#071423);color:var(--text);padding:24px;min-height:100vh}
+.auth-wrap{display:flex;align-items:center;justify-content:center;height:100vh}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:22px;border-radius:12px;width:360px;border:1px solid rgba(255,255,255,0.04)}
+.card h2{text-align:center;margin-bottom:12px}
+.card form{display:flex;flex-direction:column;gap:10px}
+input,textarea,select{padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
+button{padding:10px;border-radius:8px;border:none;cursor:pointer}
+button.primary{background:linear-gradient(90deg,var(--accent2),var(--accent1));color:#022140;font-weight:700}
+button.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
+.app{display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start;max-width:1100px;margin:0 auto}
+.top{display:flex;justify-content:space-between;align-items:center;padding:12px}
+.logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;color:#022140;font-weight:800}
+.panel{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.main-panel{padding:18px}
+.chat-box{height:220px;overflow:auto;border:1px solid rgba(255,255,255,0.03);padding:8px;border-radius:8px;margin-bottom:8px;background:rgba(255,255,255,0.01)}
+.message{padding:6px;border-radius:6px;margin:6px 0}
+.message.me{background:rgba(110,231,183,0.12);text-align:right}
+.message.other{background:rgba(255,255,255,0.02)}
+.modal-back{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,6,23,0.6)}
+.modal{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:12px;width:420px;border:1px solid rgba(255,255,255,0.04)}
